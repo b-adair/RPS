@@ -11,3 +11,9 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    let humanString = prompt("Please enter \"rock\", \"paper\", or \"scissors\"");
+    let fixedString = humanString.replace(/[^a-zA-Z]/g, '').toLowerCase().replace(/^./, char => char.toUpperCase());
+
+    return fixedString;
+}
